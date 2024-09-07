@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinLoans Property Affordability Calculator</title>
+    <style>
+        /* Add a vibrant background color */
+        body {
+            background-color: #f0f8ff; /* Light sky blue */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Calculator container style */
+        .calculator-container {
+            background-color: #ffffff;
+            border: 4px solid #1e90ff; /* Bold blue border */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            position: relative;
+            padding-top: 20px; /* Reduce padding to fit logo inside */
+        }
+
+        /* FinLoans logo style - now inside the calculator border */
+        .logo {
+            display: block;
+            margin: 0 auto 10px; /* Center the logo inside the container */
+            width: 150px; /* Adjust the width for a balanced size */
+        }
+
+        /* Form labels and input fields */
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #1e90ff;
+        }
+
+        button {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1c86ee;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #1e90ff;
+        }
+
+        /* Centering the calculator */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Wrapper to center the content -->
+    <div class="wrapper">
+        <!-- Calculator container -->
+        <div class="calculator-container">
+
+            <!-- FinLoans Logo within the border -->
+            <img src="log.png" alt="FinLoans Logo" class="logo">
+
+            <h1>FinLoans Property Affordability Calculator</h1>
+
+            <label for="annualIncome">Annual Income (₹):</label>
+            <input type="number" id="annualIncome" placeholder="Enter your annual income" required><br>
+
+            <label for="downPayment">Down Payment (₹):</label>
+            <input type="number" id="downPayment" placeholder="Enter your down payment" required><br>
+
+            <label for="loanTenure">Loan Tenure (Years):</label>
+            <input type="number" id="loanTenure" placeholder="Enter loan tenure" required><br>
+
+            <label for="interestRate">Interest Rate (%):</label>
+            <input type="number" id="interestRate" placeholder="Enter interest rate" required><br>
+
+            <button onclick="calculateAffordability()">Calculate Affordability</button>
+
+            <h2>Property You Can Afford: ₹<span id="affordableAmount">0</span></h2>
+        </div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="property-affordability.js"></script>
+
+</body>
+</html>
